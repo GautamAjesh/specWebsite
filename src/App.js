@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Header from "./components/js_file/Header";
+import ProductDetail from "./components/js_file/ProductDetail";
+import ProductSearch from "./components/js_file/ProductSearch";
+import Middle from "./components/js_file/middle";
+import Footer from "./components/js_file/footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    const [cartItems, setCartItems] = useState([]);
+
+    const addToCart = (product) => {
+        setCartItems([...cartItems, product]);
+    };
+    return (
+        <div>
+            <Header cartItems={cartItems} />
+            <ProductSearch addToCart={addToCart} />
+            <ProductDetail allProducts={cartItems} />
+            <Middle />
+            <Footer />
+        </div>
+    );
 }
-
 export default App;

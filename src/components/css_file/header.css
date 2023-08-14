@@ -1,0 +1,144 @@
+.header {
+    background-color: rgb(173,245,228);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 200px;
+    height: 100px;
+  }
+  .firstmenu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+  }  
+  .phone-number {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  } 
+  .phone-icon {
+    margin-right: 5px;
+  }
+  .search {
+    margin-right: 20px;
+  }
+  .search input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px; 
+  }
+  .sign {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .Wishlist {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+   .wishlist-icon {
+    margin-right: 5px;
+  }
+  .Cart {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .cart-icon {
+    margin-right: 5px;
+  } 
+  .secondmenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  } 
+  .secondmenu div {
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  .SALE{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+  .SALE img{
+    height: 20px;
+    width: 100px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4285f4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .avatar-options {
+    color: #333;
+    position: absolute;
+    top: 60px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    
+  }
+  
+  .avatar:hover .avatar-options {
+    display: block;
+  }
+  
+  @media (max-width: 800px) {
+    .search,
+    .Wishlist,
+    .Cart {
+      margin-right: 0; 
+      margin-bottom: 15px; 
+    }
+
+    .sign{
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
+    .firstmenu .phone-number{
+        display: none;
+    }
+    .search input{
+        width: 300px;
+        margin-left: 20px;
+    }
+    .logo{
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 150px;
+      height: 110px;
+    }
+  }
